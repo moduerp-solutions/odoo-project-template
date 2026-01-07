@@ -1,0 +1,69 @@
+# Ruff configuration — best practices
+# Compatible with Ruff >= 0.11
+# Python 3.10+
+
+target-version = "py310"
+line-length = 120
+fix = true
+
+[lint]
+preview = true
+
+select = [
+    # --- Core correctness ---
+    "F",        # pyflakes (undefined names, unused imports)
+    "E",        # pycodestyle errors
+    "W",        # pycodestyle warnings
+
+    # --- Code quality & safety ---
+    "B",        # flake8-bugbear
+    "BLE",      # blind except
+    "RET",      # return correctness
+    "TRY",      # try/except best practices
+    "SIM",      # simplify code
+    "C",        # comprehensions
+
+    # --- Imports & structure ---
+    "I",        # isort
+    "TID",      # tidy imports
+    "TC",       # type-checking imports
+
+    # --- Modern Python ---
+    "UP",       # pyupgrade
+    "FA",       # future annotations
+
+    # --- Logging & errors ---
+    "G",        # logging format
+    "LOG",      # logging rules
+    "EM",       # exception messages
+
+    # --- Ruff specific ---
+    "RUF",
+]
+
+ignore = [
+    "E501",     # line length (formatter handles this)
+    "C901",     # complexity is subjective
+    "TRY003",   # allow custom exception messages
+]
+
+[lint.per-file-ignores]
+"__init__.py" = ["F401"]   # re-exported imports
+"tests/**" = [
+    "S101",     # allow assert
+    "PLR2004",  # magic numbers
+]
+
+[lint.isort]
+section-order = [
+    "future",
+    "standard-library",
+    "third-party",
+    "first-party",
+    "local-folder",
+]
+
+[format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"

@@ -1,21 +1,20 @@
 // For format details, see https://aka.ms/devcontainer.json.
-
 {
-	"name": "Odoo 17.0",
-  "customizations": {
-		"vscode": {
-			"settings": {
-				"files.autoSave": "afterDelay",
-        "[python]": {
-          "editor.formatOnSave": true,
-          "editor.defaultFormatter": "charliermarsh.ruff"
+    "name": "Odoo 17.0",
+    "customizations": {
+        "vscode": {
+        "settings": {
+            "files.autoSave": "afterDelay",
+            "[python]": {
+            "editor.formatOnSave": true,
+            "editor.defaultFormatter": "charliermarsh.ruff"
+            }
+        },
+        "extensions": [
+            "Odoo.odoo",
+            "EditorConfig.EditorConfig",
+            "charliermarsh.ruff",
+        ]
         }
-			},
-      "extensions": [
-        "Odoo.odoo",
-        "EditorConfig.EditorConfig",
-        "charliermarsh.ruff"
-			]
     }
-  }
 }

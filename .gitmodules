@@ -1,0 +1,4 @@
+[submodule "odoo-requirements/odoo"]
+	path = odoo-requirements/odoo
+	url = git@github-moduerp:odoo/odoo.git
+	branch = 17.0

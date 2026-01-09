@@ -1,1 +1,1 @@
-# odoo-template-project
+# Project Template for Odoo v17.0
